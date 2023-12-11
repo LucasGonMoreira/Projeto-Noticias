@@ -1,0 +1,38 @@
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu do predio e morreu', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu fa escad', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Aksdm', 'corpo': 'asdfas', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu da escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu da escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiud a escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu da escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu da escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'2': {'titulo': 'Pedro', 'corpo': 'suviu o morro', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu da escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu da escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'2': {'titulo': 'Lucas4904', 'corpo': 'adm01', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu da escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu da escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu da escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu da escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caoiu da asdasfd', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu da escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
+{'1': {'titulo': 'Lucas', 'corpo': 'caiu da escada', 'autor': 'lucas4904', 'hora': '2023-12-10', 'curtidas': 0, 'comentarios': ''}}
+
