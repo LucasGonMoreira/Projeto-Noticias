@@ -24,7 +24,7 @@ def add_not(noticias,id_not,logi,not_lista,aux):
         
         with open(f'{logi}.txt','a') as f:
             f.write(f"---------\n{str(id)}\n{titulo_not}\n{corpo_not}\n{date.today()}\n--------\n")
-            
+
         print('\n=======NOTICIA=CRIADA=COM=SUCESSO!!!======\n')
     else:
         print('\nProgram error...\n')
@@ -87,38 +87,41 @@ def lista(not_lista, logi): #listar noticias
 
 
 
-def editar_noticia(not_lista): #editar noticias
+def editar_noticia(not_lista,logi): #editar noticias
     edit_noti = input('Digite o id da notícia que quer editar: ')
     for p in not_lista:
         print('=========EDITAR=NOTICIA========')
         if edit_noti not in p.keys():
             print('\n---------Notícia-não-encontrada--------\n')
         elif edit_noti in p:
-            noticia_para_editar = input('Digite qual parte da noticia você quer editar: ')
-            if noticia_para_editar == 'titulo':
-                editar_titulo = input('Digite o novo titulo: ')
-                p[edit_noti][noticia_para_editar] = editar_titulo #para pegar a notiicia no id digitado, ir no index do titulo e editar 
-                print('\n+--------------------------------------------------------------------+'
-                        f'\n{p[edit_noti]["titulo"]} ------- {p[edit_noti]["hora"]}'
-                        '\n'
-                        f'\n{p[edit_noti]["corpo"]}'
-                        '\n'
-                        f'\nautor: {p[edit_noti]["autor"]} -------- Curtidas: {p[edit_noti]["curtidas"]}'
-                        '\n+-------------------------------------------------------------------+'
-                        f"\nComentario: {p[edit_noti]['comentarios']}"
-                        '\n')
-            elif noticia_para_editar == 'corpo':
-                editar_corpo = input('Digite o novo corpo da notícia: ')
-                p[edit_noti][noticia_para_editar] = editar_corpo #para pegar a notiicia no id digitado, ir no index do corpo e editar
-                print('\n+--------------------------------------------------------------------+'
-                        f'\n{p[edit_noti]["titulo"]} ------- {p[edit_noti]["hora"]}'
-                        '\n'
-                        f'\n{p[edit_noti]["corpo"]}'
-                        '\n'
-                        f'\nautor: {p[edit_noti]["autor"]} -------- Curtidas: {p[edit_noti]["curtidas"]}'
-                        '\n+-------------------------------------------------------------------+'
-                        f"\nComentario: {p[edit_noti]['comentarios']}"
-                        '\n')
+            if logi == p[edit_noti]["autor"]:
+                noticia_para_editar = input('Digite qual parte da noticia você quer editar: ')
+                if noticia_para_editar == 'titulo':
+                    editar_titulo = input('Digite o novo titulo: ')
+                    p[edit_noti][noticia_para_editar] = editar_titulo #para pegar a notiicia no id digitado, ir no index do titulo e editar 
+                    print('\n+--------------------------------------------------------------------+'
+                            f'\n{p[edit_noti]["titulo"]} ------- {p[edit_noti]["hora"]}'
+                            '\n'
+                            f'\n{p[edit_noti]["corpo"]}'
+                            '\n'
+                            f'\nautor: {p[edit_noti]["autor"]} -------- Curtidas: {p[edit_noti]["curtidas"]}'
+                            '\n+-------------------------------------------------------------------+'
+                            f"\nComentario: {p[edit_noti]['comentarios']}"
+                            '\n')
+                elif noticia_para_editar == 'corpo':
+                    editar_corpo = input('Digite o novo corpo da notícia: ')
+                    p[edit_noti][noticia_para_editar] = editar_corpo #para pegar a notiicia no id digitado, ir no index do corpo e editar
+                    print('\n+--------------------------------------------------------------------+'
+                            f'\n{p[edit_noti]["titulo"]} ------- {p[edit_noti]["hora"]}'
+                            '\n'
+                            f'\n{p[edit_noti]["corpo"]}'
+                            '\n'
+                            f'\nautor: {p[edit_noti]["autor"]} -------- Curtidas: {p[edit_noti]["curtidas"]}'
+                            '\n+-------------------------------------------------------------------+'
+                            f"\nComentario: {p[edit_noti]['comentarios']}"
+                            '\n')
+            elif logi != p[edit_noti]["autor"]:
+                print('Você não tem acesso a essa notícia...')
             
 
 def salvar_como_pdf(logi):

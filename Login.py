@@ -55,7 +55,7 @@ def login_adm(logi, not_lista, noticias, id_not,aux):
             login_adm(logi, not_lista, noticias, id_not,aux)
 
         elif opcao == 4:
-            editar_noticia(not_lista)
+            editar_noticia(not_lista,logi)
             login_adm(logi, not_lista, noticias, id_not,aux)
 
 
