@@ -41,6 +41,6 @@ def noticias_cadastradas(not_lista):
                     '\n'
                     f'\nautor: {p["autor"]} -------- Curtidas: {p["curtidas"]}'
                     '\n+-------------------------------------------------------------------+'
-                    f"\nComentario: {n['comentarios']}"
+                    f'\nComentario: {p["comentarios"]}'
                     '\n')
             print('════════════════════════════════════════════════════════════════════════════')

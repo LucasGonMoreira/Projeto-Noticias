@@ -23,8 +23,8 @@ def add_not(noticias,id_not,logi,not_lista,aux):
         not_lista.append(noticias)
         
         with open(f'{logi}.txt','a') as f:
-            f.write(f'{noticias}\n\n')
-
+            f.write(f"---------\n{str(id)}\n{titulo_not}\n{corpo_not}\n{date.today()}\n--------\n")
+            
         print('\n=======NOTICIA=CRIADA=COM=SUCESSO!!!======\n')
     else:
         print('\nProgram error...\n')
@@ -88,15 +88,13 @@ def lista(not_lista, logi): #listar noticias
 
 
 def editar_noticia(not_lista): #editar noticias
+    edit_noti = input('Digite o id da notícia que quer editar: ')
     for p in not_lista:
-        while True:
-            print('=========EDITAR=NOTICIA========')
-            edit_noti = input('Digite o id da notícia que quer editar: ')
-            if edit_noti not in p:
-                print('\n------Notícia-não-encontrar----\n')
-            elif edit_noti in p:
-                noticia_para_editar = input('Digite qual parte da noticia você quer editar: ')
-        
+        print('=========EDITAR=NOTICIA========')
+        if edit_noti not in p.keys():
+            print('\n---------Notícia-não-encontrada--------\n')
+        elif edit_noti in p:
+            noticia_para_editar = input('Digite qual parte da noticia você quer editar: ')
             if noticia_para_editar == 'titulo':
                 editar_titulo = input('Digite o novo titulo: ')
                 p[edit_noti][noticia_para_editar] = editar_titulo #para pegar a notiicia no id digitado, ir no index do titulo e editar 
@@ -109,13 +107,6 @@ def editar_noticia(not_lista): #editar noticias
                         '\n+-------------------------------------------------------------------+'
                         f"\nComentario: {p[edit_noti]['comentarios']}"
                         '\n')
-
-                tentar_novamnete = input('=====Deseja tentar novamente? [S/N]=====')
-                if tentar_novamnete.lower() == 'n':
-                    print('\nEncerrando...\n')
-                    break
-                elif tentar_novamnete.lower() == 's':
-                    continue
             elif noticia_para_editar == 'corpo':
                 editar_corpo = input('Digite o novo corpo da notícia: ')
                 p[edit_noti][noticia_para_editar] = editar_corpo #para pegar a notiicia no id digitado, ir no index do corpo e editar
@@ -128,43 +119,10 @@ def editar_noticia(not_lista): #editar noticias
                         '\n+-------------------------------------------------------------------+'
                         f"\nComentario: {p[edit_noti]['comentarios']}"
                         '\n')
-                
-                tentar_novamnete = input('=====Deseja tentar novamente? [S/N]=====')
-                if tentar_novamnete.lower() == 'n':
-                    print('\nEncerrando...\n')
-                    break
-                elif tentar_novamnete.lower() == 's':
-                    continue
-            elif edit_noti not in p: #se a o id não estiver no dicionario
-                print('----NOTICIA-NÃO-ENCONTRADA!!!----')
-                tentar_novamnete = input('Deseja tentar novamente? [S/N]')
-                if tentar_novamnete.lower() == 'n':
-                    print('\nEncerrando...\n')
-                    break
-                elif tentar_novamnete.lower() == 's':
-                    continue
+            
 
 def salvar_como_pdf(logi):
     doc = aw.Document(f"{logi}.txt")
     doc.save(f"{logi}_pdf.pdf")
     print('\nDocumento salvo com sucesso!!!\n')
     False
-
-
-'''def listar_por_curtidas(not_lista):
-    for p in not_lista:
-    for z in p.values():
-    
-    lista_noti = list(z.items())
-    print(lista_noti)
-    n = len(lista_noti)
-    for i in range (n):
-        for j in range (0, n-i-1):
-            if lista_noti[j][1] < lista_noti[j+1][1]:
-                aux = lista_noti[j]
-                lista_noti[j] = lista_noti[j + 1]
-                lista_noti[j + 1] = aux
-            else:
-                print('Program error...')
-
-    print(lista_noti)'''

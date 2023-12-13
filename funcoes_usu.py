@@ -46,7 +46,17 @@ def buscar_noticia_usuario(not_lista):
     for p in not_lista:
         for n in p.values():
             if noticia_pesquisar in n["titulo"]:
-                noticias_cadastradas(not_lista)
+                print('\n+--------------------------------------------------------------------+'
+                        f'\n{p["titulo"]} ------- {p["hora"]}'
+                        '\n'
+                        f'\n{p["corpo"]}'
+                        '\n'
+                        f'\nautor: {p["autor"]} -------- Curtidas: {p["curtidas"]}'
+                        '\n+-------------------------------------------------------------------+'
+                        f'\nComentario: {p["comentarios"]}'
+                        '\n')
+                print('════════════════════════════════════════════════════════════════════════════')
+                
             elif noticia_pesquisar not in n["titulo"]:
                 print('\nNoticia não encontrada...\n')
             else:

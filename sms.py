@@ -1,5 +1,6 @@
 from twilio.rest import Client
 from datetime import date
+import emoji
 
 
 def notificar_comentario(logi, comentario):
@@ -16,4 +17,4 @@ def notificar_curtida():
 
     client = Client(account_sid, auth_token)
 
-    client.messages.create(from_=('14157671948'), to=('5583993509222'), body=('Alguém curtiu sua notícia..'))
+    client.messages.create(from_=('14157671948'), to=('5583993509222'), body=(emoji.emojize('Alguém curtiu sua notícia :red_heart:')))
