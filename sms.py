@@ -4,17 +4,17 @@ import emoji
 
 
 def notificar_comentario(logi, comentario):
-    account_sid = ('AC61687f37af782bf8b2245948965a4491')
-    auth_token = ('d92e228488cb679705b893c2350d4c6d')
+    account_sid = (ACCOUNT_SID)
+    auth_token = (AUTH_TOKEN)
 
     client = Client(account_sid, auth_token)
 
-    client.messages.create(from_=('14157671948'), to=('5583993509222'), body=(f'{logi} = {comentario} | {date.today()}'))
+    client.messages.create(from_=('14157671948'), to=(NUMBER), body=(f'{logi} = {comentario} | {date.today()}'))
 
 def notificar_curtida():
-    account_sid = ('AC61687f37af782bf8b2245948965a4491')
-    auth_token = ('d92e228488cb679705b893c2350d4c6d')
+    account_sid = ((ACCOUNT_SID)
+    auth_token = (AUTH_TOKEN)
 
     client = Client(account_sid, auth_token)
 
-    client.messages.create(from_=('14157671948'), to=('5583993509222'), body=(emoji.emojize('Alguém curtiu sua notícia :red_heart:')))
+    client.messages.create(from_=('14157671948'), to=(NUMBER), body=(emoji.emojize('Alguém curtiu sua notícia :red_heart:')))
